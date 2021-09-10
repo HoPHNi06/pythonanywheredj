@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="features" style="margin-top: 120px; color: #FF7F00;">
+    <h1 style="margin-bottom: 10px;">Калькулятор</h1><br>
+    <form id="main-form" onsubmit="return checkForm(this)" method="post">
+        <label for="number"><b>Первое число:</b></label>
+        <input type="number" name="number" id="number" class="number"> <br><br>
+        <label for="number1"><b>Второе число:</b></label>
+        <input type="number" name="number1" id="number1" class="number1"><br><br>
+        <span><b>Выберите действие:</b></span><br>
+        <input type="radio" name="state" id="plus" class="Deystviye" value="Сложение">
+        <label for="plus" class="Deystviya" >Сложение</label>
+        <input type="radio" name="state" id="minus" class="Deystviye" value="Вычитание">
+        <label for="minus" class="Deystviya" >Вычитание</label><br>
+        <input type="radio" name="state" id="multiplication" class="Deystviye" value="Умножение">
+        <label for="multiplication" class="Deystviya" >Умножение</label>
+        <input type="radio" name="state" id="division" class="Deystviye" value="Деление">
+        <label for="division" class="Deystviya" >Деление</label><br>
+        <input type="radio" name="state" id="power" class="Deystviye" value="Возведение в степень">
+        <label for="power" class="Deystviya" >Возведение в степень</label><br>
+        <input type="radio" name="state" id="remainder" class="Deystviye" value="Остаток при делении">
+        <label for="remainder" class="Deystviya" >Остаток при делении</label>
+        <br>
+        <br>
+        <input class="btn btn-warning" type="submit" name="submit" value="Узнать результат" id="btnrezult">
+        <br><br>
+        <div id="error" style="color: red;"></div>
+        <span><b>Результат:</b></span>
+        <div class="btn btn-warning" id="answer"></div>
+    </form>
+
+</div>
+{% endblock %}
